@@ -28,9 +28,9 @@ app.use('/logout', require('./routes/logout'));
 
 
 
-/*app.use((req,res,next)=>{
-    res.status(404).render('404');
-});*/
+app.use((req,res,next)=>{
+ res.status(404).render('404');
+});
 
 
 module.exports = app;
