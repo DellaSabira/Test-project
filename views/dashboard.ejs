@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        
+        <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%; 
+                font-family: "poppins", sans-serif;
+                /*  position: fixed;*/
+}
+            body{
+                background-image: url('admin.svg');
+                background-size:  500px;
+                background-repeat: no-repeat;
+                background-position: right;
+                background-attachment: fixed;
+            }
+            #logo{
+                height: 200px;
+                margin-top: -60px;
+                margin-bottom: -60px;
+            }   
+            nav{
+                border-bottom: groove;
+                border-bottom-color: #1275ff;
+                }
+            .parent{
+                display: grid;
+                grid-template-columns: 30% 30%;
+            }
+            button {
+                 margin: 40px;
+                 border: none;
+                 display: block;
+                 position: relative;
+                 padding: 0.7em 2.4em;
+                 font-size: 18px;
+                 background: transparent;
+                 cursor: pointer;
+                 user-select: none;
+                 overflow: hidden;
+                 color: royalblue;
+                 z-index: 1;
+                 font-family: inherit;
+                 font-weight: 500;
+                }
+
+                button span {
+                 position: absolute;
+                 left: 0;
+                 top: 0;
+                 width: 100%;
+                 height: 100%;
+                 background: transparent;
+                 z-index: -1;
+                 border: 4px solid royalblue;
+                }
+
+                button span::before {
+                 content: "";
+                 display: block;
+                 position: absolute;
+                 width: 8%;
+                 height: 500%;
+                 background: var(--lightgray);
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%, -50%) rotate(-60deg);
+                 transition: all 0.3s;
+                }
+
+                button:hover span::before {
+                 transform: translate(-50%, -50%) rotate(-90deg);
+                 width: 100%;
+                 background: royalblue;
+                }
+
+                button :hover {
+                 color: white;
+                }
+
+                button:active span::before {
+                 background: #2751cd;
+                }
+            h1{
+                color: #1275ff;
+                margin: 20px;
+                margin-left: 100px;
+            }
+            button a{
+                text-decoration: none;
+                color:royalblue;
+            }
+            .element{
+                display: inline-block;
+            }
+            .dropbtn {
+                font-family: "poppins", sans-serif;
+                background-color: #1275ff;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                border-radius: 8px;
+                margin-top: 10px;
+              }
+              
+        </style>
+         <title> Dashboard </title>
+    </head>
+    
+    
+<body>
+    <nav>
+        
+    </nav>
+    
+   
+    <h1>Admin dashboard </h1>
+    
+   
+                <div class="parent">
+                    <button> <a href="registerCow">Cow registration</a>
+                    <span></span>
+                    </button>
+
+                    <button> <a href="newBirth">New birth  registration </a>
+                    <span></span>
+                    </button>
+                
+                
+                    <button> <a href="registerMilk">Milk registration </a>
+                    <span></span>
+                    </button>
+
+                    <button> <a href="registerMedicalExam"> Medical exam registration </a>
+                    <span></span>
+                    </button>
+    
+                    
+                </div>
+
+</body> 
+</html>
