@@ -23,7 +23,7 @@ app.use('/registerCow', require('./routes/regCow'));
 app.use('/registerMilk', require('./routes/regMilk'));
 app.use('/registerMedicalExam', require('./routes/regMedicalExam'));
 app.use('/newBirth', require('./routes/regNewbirth'));
-app.use('/logout', require('./routes/logout')); 
+app.use('/Cows', require('./routes/cows'));
 
 
 

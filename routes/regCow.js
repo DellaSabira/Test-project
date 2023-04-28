@@ -22,7 +22,7 @@ router.post('/',(req,res)=>{
 
     const data = JSON.stringify(json);
     fs.writeFileSync('./jsonFiles/cow.json',data,'utf-8');
-    res.redirect('Cows');
+    res.redirect('/Cows');
     });
 
 
