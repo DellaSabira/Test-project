@@ -4,28 +4,26 @@ const router = express.Router();
 
 const data= fs.readFileSync('./jsonFiles/cow.json');
 let json = JSON.parse(data);
+
 router.get('/',(req,res)=>{
     res.render('registerCow');
 });
 
-router.post('/',(req,res)=>{
-    const {name,birthday,enter,breed,motherid} = req.body;
-    let newCow={
+router.post('/',(req,res) => {
+    const { name, birthday, breed, motherid } = req.body;
+    let newCow = {
         id:json.length+1,
         name,
         birthday,
-        enter,
         breed,
         motherid
     };
-    json.push(newCow);
 
+    json.push(newCow);
     const data = JSON.stringify(json);
     fs.writeFileSync('./jsonFiles/cow.json',data,'utf-8');
-    res.redirect('/Cows');
-    });
-
-
+    res.redirect('/');
+});
 
 
 module.exports = router;

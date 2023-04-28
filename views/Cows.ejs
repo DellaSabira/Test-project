@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/cows.css">
+    <title>Cows</title>
 </head>
 <body>
-    <h1> her you will see all cows </h1>
+    <h1> here you will see all cows </h1>
+    <ul>
+        <% for (let i = 0; i < cows.length; i++) { %>
+            <li> 
+                <p> Id: <%= cows[i].id %> </p>
+                <p> Name: <%= cows[i].name %> </p>
+                <p> <%=cows[i].birthday %> </p>
+                <p> Breed: <%=cows[i].breed %> </p>
+                <p> Mother: <%=cows[i].motherid %> </p>
+            </li>
+        <% } %>
+    </ul>
+    <div class="wrapper">
+        <a href="/cows/Holstein"> Filter By Holstein </a>
+        <a href="/cows/Montblyard"> Filter By Montblyard </a>
+        <a href="/cows"> Show All </a>
+    </div>
 </body>
 </html>

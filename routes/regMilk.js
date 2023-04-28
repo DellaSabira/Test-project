@@ -20,8 +20,7 @@ router.post('/',(req,res)=>{
 
     const data = JSON.stringify(json);
     fs.writeFileSync('./jsonFiles/milk.json',data,'utf-8');
-    res.redirect('Cows');
-
+    res.redirect('/');
 });
 
 module.exports = router;

@@ -11,32 +11,28 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req,res)=>{
     const id = req.body.number;
-    //console.log(id);
     const {disease,Date} = req.body;
-    let newExam={
+    let newExam = {
         disease,
         Date
     };
-    for (let i=0; i < json.length; i++){
-        if(json[i].id == id  ){
+    for (let i = 0; i < json.length; i++) {
+        if(json[i].id == id) {
             if(json[i].MedicalExam){
             json[i].MedicalExam.push(newExam);
             const data = JSON.stringify(json);
-            fs.writeFileSync('./jsonFiles/cow.json',data,'utf-8');
-            res.redirect('Cows'); 
-            }
-            if(!json[i].MedicalExam){
-                json[i].MedicalExam=[];
+            fs.writeFileSync('./jsonFiles/cow.json', data, 'utf-8');
+            res.redirect('Cows');
+        }
+            if(!json[i].MedicalExam) {
+                json[i].MedicalExam = [];
                 json[i].MedicalExam.push(newExam);
                 const data = JSON.stringify(json);
-                fs.writeFileSync('./jsonFiles/cow.json',data,'utf-8');
-                res.redirect('Cows'); 
-                }
+                fs.writeFileSync('./jsonFiles/cow.json', data, 'utf-8');
+                res.redirect('/'); 
+            }
         }
-        }
+    }
+});
 
-    
-
-    
-    });
 module.exports = router;
