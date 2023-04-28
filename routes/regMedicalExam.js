@@ -37,20 +37,6 @@ router.post('/',(req,res)=>{
 
     
 
-    /*
-    const {name,birthday,enter,breed,motherid} = req.body;
-    let newCow={
-        id:json.length+1,
-        name,
-        birthday,
-        enter,
-        breed,
-        motherid
-    };
-    json.push(newCow);
-
-    const data = JSON.stringify(json);
-    fs.writeFileSync('./jsonFiles/cow.json',data,'utf-8');
-    res.redirect('Cows'); */
+    
     });
 module.exports = router;

@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(cors());
 
 // routers
-app.use('/', require('./routes/index'));
+
 app.use('/dashboard', require('./routes/dashboard'));
 app.use('/registerCow', require('./routes/regCow'));
 app.use('/registerMilk', require('./routes/regMilk'));
